@@ -47,6 +47,12 @@ public class Order  {
     
     
     private String reason;
+    
+    
+    
+    
+    
+    private Double foodCost;
 
     @PostPersist
     public void onPostPersist(){
