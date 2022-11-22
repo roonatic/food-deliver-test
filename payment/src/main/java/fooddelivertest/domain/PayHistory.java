@@ -1,5 +1,6 @@
 package fooddelivertest.domain;
 
+import fooddelivertest.domain.Payed;
 import fooddelivertest.PaymentApplication;
 import javax.persistence.*;
 import java.util.List;
@@ -21,9 +22,26 @@ public class PayHistory  {
     
     
     private Long id;
+    
+    
+    
+    
+    
+    private Long orderId;
+    
+    
+    
+    
+    
+    private Integer cost;
 
     @PostPersist
     public void onPostPersist(){
+
+
+        Payed payed = new Payed(this);
+        payed.publishAfterCommit();
+
     }
 
     public static PayHistoryRepository repository(){

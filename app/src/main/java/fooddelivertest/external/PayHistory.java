@@ -6,6 +6,8 @@ import java.util.Date;
 public class PayHistory {
 
     private Long id;
+    private Long orderId;
+    private Integer cost;
 }
 
 
