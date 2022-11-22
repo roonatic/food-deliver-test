@@ -87,6 +87,22 @@ public class PolicyHandler{
         
 
     }
+    @StreamListener(value=KafkaProcessor.INPUT, condition="headers['type']=='DeliveryFinished'")
+    public void wheneverDeliveryFinished_AlertOrderStatus(@Payload DeliveryFinished deliveryFinished){
+
+        DeliveryFinished event = deliveryFinished;
+        System.out.println("\n\n##### listener AlertOrderStatus : " + deliveryFinished + "\n\n");
+
+
+        
+
+        // Sample Logic //
+        Order.alertOrderStatus(event);
+        
+
+        
+
+    }
 
 }
 

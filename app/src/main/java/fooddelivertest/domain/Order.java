@@ -35,6 +35,18 @@ public class Order  {
     
     
     private Integer amount;
+    
+    
+    
+    
+    
+    private String status;
+    
+    
+    
+    
+    
+    private String reason;
 
     @PostPersist
     public void onPostPersist(){
@@ -141,6 +153,27 @@ public class Order  {
         /** Example 2:  finding and process
         
         repository().findById(pickedUp.get???()).ifPresent(order->{
+            
+            order // do something
+            repository().save(order);
+
+
+         });
+        */
+
+        
+    }
+    public static void alertOrderStatus(DeliveryFinished deliveryFinished){
+
+        /** Example 1:  new item 
+        Order order = new Order();
+        repository().save(order);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(deliveryFinished.get???()).ifPresent(order->{
             
             order // do something
             repository().save(order);
