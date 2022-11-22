@@ -12,11 +12,11 @@ spring:
           uri: http://localhost:8081
           predicates:
             - Path=/orders/**, 
-        - id: 상점
+        - id: store
           uri: http://localhost:8082
           predicates:
             - Path=/storeOrders/**, 
-        - id: 결제
+        - id: payment
           uri: http://localhost:8083
           predicates:
             - Path=/payHistories/**, 
@@ -51,12 +51,12 @@ spring:
           uri: http://app:8080
           predicates:
             - Path=/orders/**, 
-        - id: 상점
-          uri: http://상점:8080
+        - id: store
+          uri: http://store:8080
           predicates:
             - Path=/storeOrders/**, 
-        - id: 결제
-          uri: http://결제:8080
+        - id: payment
+          uri: http://payment:8080
           predicates:
             - Path=/payHistories/**, 
         - id: deliveryMen

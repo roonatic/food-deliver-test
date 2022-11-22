@@ -21,8 +21,8 @@ cd /bin
 See the README.md files inside the each microservices directory:
 
 - app
-- 상점
-- 결제
+- store
+- payment
 - deliveryMen
 
 
@@ -37,11 +37,11 @@ mvn spring-boot:run
 ```
  http :8088/orders id="id" foodId="foodId" amount="amount" 
 ```
-- 상점
+- store
 ```
  http :8088/storeOrders id="id" foodId="foodId" orderId="orderId" status="status" 
 ```
-- 결제
+- payment
 ```
  http :8088/payHistories id="id" 
 ```

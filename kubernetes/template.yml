@@ -43,22 +43,22 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: 상점
+  name: store
   labels:
-    app: 상점
+    app: store
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: 상점
+      app: store
   template:
     metadata:
       labels:
-        app: 상점
+        app: store
     spec:
       containers:
-        - name: 상점
-          image: username/상점:latest
+        - name: store
+          image: username/store:latest
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -83,22 +83,22 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: 결제
+  name: payment
   labels:
-    app: 결제
+    app: payment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: 결제
+      app: payment
   template:
     metadata:
       labels:
-        app: 결제
+        app: payment
     spec:
       containers:
-        - name: 결제
-          image: username/결제:latest
+        - name: payment
+          image: username/payment:latest
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -182,15 +182,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: 상점
+  name: store
   labels:
-    app: 상점
+    app: store
 spec:
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    app: 상점
+    app: store
 
 
 ---
@@ -199,15 +199,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: 결제
+  name: payment
   labels:
-    app: 결제
+    app: payment
 spec:
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    app: 결제
+    app: payment
 
 
 ---
