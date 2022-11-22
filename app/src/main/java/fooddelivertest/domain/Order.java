@@ -74,7 +74,7 @@ public class Order  {
         AppApplication.applicationContext.getBean(fooddelivertest.external.PayHistoryService.class)
             .pay(payHistory);
 
-
+        if(payHistory.getCost() < amount * foodCost) throw new RuntimeException("cannot order: not enough money!");
         Ordered ordered = new Ordered(this);
         ordered.publishAfterCommit();
 
