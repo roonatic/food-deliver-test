@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.Date;
 
-@FeignClient(name = "결제", url = "${api.url.결제}")
+@FeignClient(name = "payment", url = "${api.url.payment}")
 public interface PayHistoryService {
     @RequestMapping(method= RequestMethod.POST, path="/payHistories")
     public void pay(@RequestBody PayHistory payHistory);

@@ -67,6 +67,90 @@ public class Order  {
 
 
 
+    public static void alertOrderStatus(Accepted accepted){
+
+        /** Example 1:  new item 
+        Order order = new Order();
+        repository().save(order);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(accepted.get???()).ifPresent(order->{
+            
+            order // do something
+            repository().save(order);
+
+
+         });
+        */
+
+        
+    }
+    public static void alertOrderStatus(Rejected rejected){
+
+        /** Example 1:  new item 
+        Order order = new Order();
+        repository().save(order);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(rejected.get???()).ifPresent(order->{
+            
+            order // do something
+            repository().save(order);
+
+
+         });
+        */
+
+        
+    }
+    public static void alertOrderStatus(Cooked cooked){
+
+        /** Example 1:  new item 
+        Order order = new Order();
+        repository().save(order);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(cooked.get???()).ifPresent(order->{
+            
+            order // do something
+            repository().save(order);
+
+
+         });
+        */
+
+        
+    }
+    public static void alertOrderStatus(PickedUp pickedUp){
+
+        /** Example 1:  new item 
+        Order order = new Order();
+        repository().save(order);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(pickedUp.get???()).ifPresent(order->{
+            
+            order // do something
+            repository().save(order);
+
+
+         });
+        */
+
+        
+    }
 
 
 }
