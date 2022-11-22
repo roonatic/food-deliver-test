@@ -11,6 +11,7 @@
             <div>
                 <Number label="OrderId" v-model="item.orderId" :editMode="editMode" @change="change" />
             </div>
+            <StoreOrderId offline label="StoreOrderId" v-model="item.storeOrderId" :editMode="false" :key="false" @change="change" />
         </v-card-text>
 
         <v-card-actions>
