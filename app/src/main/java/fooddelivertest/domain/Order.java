@@ -98,7 +98,13 @@ public class Order  {
          });
         */
 
-        
+        repository().findById(accepted.getOrderId()).ifPresent(order->{
+            
+            order.setStatus("ACCEPTED"); // do something
+            repository().save(order);
+
+
+         });
     }
     public static void alertOrderStatus(Rejected rejected){
 
@@ -119,7 +125,14 @@ public class Order  {
          });
         */
 
-        
+        repository().findById(rejected.getOrderId()).ifPresent(order->{
+            
+            order.setStatus("REJECTED"); // do something
+            order.setReason(rejected.getRejectionReason());
+            repository().save(order);
+
+
+         });
     }
     public static void alertOrderStatus(Cooked cooked){
 
@@ -140,7 +153,13 @@ public class Order  {
          });
         */
 
-        
+        repository().findById(cooked.getOrderId()).ifPresent(order->{
+            
+            order.setStatus("COOKED"); // do something
+            repository().save(order);
+
+
+         });
     }
     public static void alertOrderStatus(PickedUp pickedUp){
 
@@ -161,7 +180,14 @@ public class Order  {
          });
         */
 
-        
+        repository().findById(pickedUp.getOrderId()).ifPresent(order->{
+            
+            order.setStatus("PICKED UP"); // do something
+            repository().save(order);
+
+
+         });
+
     }
     public static void alertOrderStatus(DeliveryFinished deliveryFinished){
 
@@ -182,7 +208,13 @@ public class Order  {
          });
         */
 
-        
+        repository().findById(deliveryFinished.getOrderId()).ifPresent(order->{
+            
+            order.setStatus("DELIVERY FINISHED"); // do something
+            repository().save(order);
+
+
+         });    
     }
 
 
