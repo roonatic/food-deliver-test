@@ -10,7 +10,7 @@ import lombok.*;
 public class Ordered extends AbstractEvent {
 
     private Long id;
-    private String foodId;
+    private Long foodId;
     private Integer amount;
 
     public Ordered(Order aggregate){

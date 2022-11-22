@@ -100,7 +100,7 @@
             
             this.newValue = {
                 'address': '',
-                'orderId': '',
+                'orderId': 0,
             }
         },
         methods: {

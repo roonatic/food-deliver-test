@@ -10,7 +10,7 @@ import lombok.*;
 public class Rejected extends AbstractEvent {
 
     private Long id;
-    private String orderId;
+    private Long orderId;
     private String options;
     private String rejectedReason;
 

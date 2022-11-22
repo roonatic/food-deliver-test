@@ -29,13 +29,13 @@ public class StoreOrder  {
     
     
     
-    private String foodId;
+    private Long foodId;
     
     
     
     
     
-    private String orderId;
+    private Long orderId;
     
     
     
