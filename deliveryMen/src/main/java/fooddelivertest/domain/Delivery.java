@@ -88,13 +88,7 @@ public class Delivery  {
          });
         */
 
-        repository().findById(cooked.getOrderId()).ifPresent(order->{
-            
-            order.setStatus("Start delivery"); // do something
-            repository().save(order);
-
-
-         });
+        
     }
 
 

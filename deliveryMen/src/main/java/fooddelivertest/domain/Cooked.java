@@ -13,8 +13,12 @@ public class Cooked extends AbstractEvent {
     private Long orderId;
     private String status;
 
+    public Long getId() {
+        return id;
+    }
 
-
-
+    public void setId(Long id) {
+        this.id = id;
+    }
 
 }
