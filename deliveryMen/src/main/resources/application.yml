@@ -1,12 +1,5 @@
 server:
   port: 8080
-feign:
-  hystrix:
-    enabled: true
-hystrix:
-  command:
-    default:
-      execution.isolation.thread.timeoutInMilliseconds: 500
 spring:
   application:
     name: deliverymen
@@ -46,10 +39,6 @@ logging:
     org.hibernate.type: trace
     org.springframework.cloud: debug
 
-api:
-  url:
-    store: store:8082
-
 
 server:
   port: 8084
@@ -79,9 +68,5 @@ spring:
         event-out:
           destination: fooddelivertest
           contentType: application/json
-
-api:
-  url:
-    store: store:8080
 
 

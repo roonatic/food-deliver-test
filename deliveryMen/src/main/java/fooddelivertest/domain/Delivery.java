@@ -54,11 +54,6 @@ public class Delivery  {
         DeliveryFinished deliveryFinished = new DeliveryFinished(this);
         deliveryFinished.publishAfterCommit();
 
-        // Get request from StoreOrder
-        //fooddelivertest.external.StoreOrder storeOrder =
-        //    Application.applicationContext.getBean(fooddelivertest.external.StoreOrderService.class)
-        //    .getStoreOrder(/** mapping value needed */);
-
     }
 
     public static DeliveryRepository repository(){

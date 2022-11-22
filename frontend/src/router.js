@@ -8,6 +8,8 @@ Vue.use(Router);
 import OrderManager from "./components/listers/OrderCards"
 import OrderDetail from "./components/listers/OrderDetail"
 
+import MyOrderView from "./components/MyOrderView"
+import MyOrderViewDetail from "./components/MyOrderViewDetail"
 import StoreOrderManager from "./components/listers/StoreOrderCards"
 import StoreOrderDetail from "./components/listers/StoreOrderDetail"
 
@@ -33,6 +35,16 @@ export default new Router({
                 component: OrderDetail
             },
 
+            {
+                path: '/myOrders',
+                name: 'MyOrderView',
+                component: MyOrderView
+            },
+            {
+                path: '/myOrders/:id',
+                name: 'MyOrderViewDetail',
+                component: MyOrderViewDetail
+            },
             {
                 path: '/storeOrders',
                 name: 'StoreOrderManager',

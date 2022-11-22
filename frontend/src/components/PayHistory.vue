@@ -17,6 +17,8 @@
         </v-card-title >
 
         <v-card-text>
+            <Number label="OrderId" v-model="value.orderId" :editMode="editMode"/>
+            <Number label="Cost" v-model="value.cost" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions>

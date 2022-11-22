@@ -1,7 +1,7 @@
 package fooddelivertest.domain;
 
-import fooddelivertest.domain.Ordered;
 import fooddelivertest.domain.OrderCanceled;
+import fooddelivertest.domain.Ordered;
 import fooddelivertest.AppApplication;
 import javax.persistence.*;
 import java.util.List;
@@ -51,6 +51,14 @@ public class Order  {
     @PostPersist
     public void onPostPersist(){
 
+
+        OrderCanceled orderCanceled = new OrderCanceled(this);
+        orderCanceled.publishAfterCommit();
+
+    }
+    @PrePersist
+    public void onPrePersist(){
+
         //Following code causes dependency to external APIs
         // it is NOT A GOOD PRACTICE. instead, Event-Policy mapping is recommended.
 
@@ -63,11 +71,6 @@ public class Order  {
 
         Ordered ordered = new Ordered(this);
         ordered.publishAfterCommit();
-
-
-
-        OrderCanceled orderCanceled = new OrderCanceled(this);
-        orderCanceled.publishAfterCommit();
 
     }
 

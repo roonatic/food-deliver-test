@@ -67,6 +67,8 @@
             headers: 
                 [
                     { text: "id", value: "id" },
+                    { text: "orderId", value: "orderId" },
+                    { text: "cost", value: "cost" },
                 ],
             payHistory : [],
             newValue: {},
@@ -84,6 +86,8 @@
             this.values = temp.data._embedded.payhistories;
 
             this.newValue = {
+                'orderId': 0,
+                'cost': 0,
             }
         },
         methods: {
