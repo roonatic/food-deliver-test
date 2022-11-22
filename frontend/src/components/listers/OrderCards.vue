@@ -70,6 +70,8 @@
             me.newValue = {
                 'foodId': '',
                 'amount': 0,
+                'status': '',
+                'reason': '',
             }
         },
         methods:{

@@ -35,7 +35,7 @@ mvn spring-boot:run
 ## Test by API
 - app
 ```
- http :8088/orders id="id" foodId="foodId" amount="amount" 
+ http :8088/orders id="id" foodId="foodId" amount="amount" status="status" reason="reason" 
 ```
 - store
 ```

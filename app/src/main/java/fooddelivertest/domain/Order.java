@@ -35,6 +35,18 @@ public class Order  {
     
     
     private Integer amount;
+    
+    
+    
+    
+    
+    private String status;
+    
+    
+    
+    
+    
+    private String reason;
 
     @PostPersist
     public void onPostPersist(){
