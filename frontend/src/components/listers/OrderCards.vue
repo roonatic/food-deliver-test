@@ -72,6 +72,7 @@
                 'amount': 0,
                 'status': '',
                 'reason': '',
+                'foodCost': 0,
             }
         },
         methods:{

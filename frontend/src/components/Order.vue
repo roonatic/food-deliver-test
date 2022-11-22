@@ -21,6 +21,7 @@
             <Number label="Amount" v-model="value.amount" :editMode="editMode"/>
             <String label="Status" v-model="value.status" :editMode="editMode"/>
             <String label="Reason" v-model="value.reason" :editMode="editMode"/>
+            <Number label="FoodCost" v-model="value.foodCost" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions>

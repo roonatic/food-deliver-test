@@ -17,6 +17,9 @@
             <div>
                 <String label="Reason" v-model="item.reason" :editMode="editMode" @change="change" />
             </div>
+            <div>
+                <Number label="FoodCost" v-model="item.foodCost" :editMode="editMode" @change="change" />
+            </div>
         </v-card-text>
 
         <v-card-actions>

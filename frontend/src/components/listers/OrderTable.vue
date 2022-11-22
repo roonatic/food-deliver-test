@@ -71,6 +71,7 @@
                     { text: "amount", value: "amount" },
                     { text: "status", value: "status" },
                     { text: "reason", value: "reason" },
+                    { text: "foodCost", value: "foodCost" },
                 ],
             order : [],
             newValue: {},
@@ -92,6 +93,7 @@
                 'amount': 0,
                 'status': '',
                 'reason': '',
+                'foodCost': 0,
             }
         },
         methods: {
