@@ -12,6 +12,9 @@ public class Cooked extends AbstractEvent {
     private Long foodId;
     private Long orderId;
     private String status;
+
+
+
+
+
 }
-
-

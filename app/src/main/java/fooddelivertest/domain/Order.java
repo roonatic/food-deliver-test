@@ -128,7 +128,7 @@ public class Order  {
         repository().findById(rejected.getOrderId()).ifPresent(order->{
             
             order.setStatus("REJECTED"); // do something
-            order.setReason(rejected.getRejectionReason());
+            order.setReason(rejected.getRejectedReason());
             repository().save(order);
 
 
