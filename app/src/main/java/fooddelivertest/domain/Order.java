@@ -163,6 +163,27 @@ public class Order  {
 
         
     }
+    public static void alertOrderStatus(DeliveryFinished deliveryFinished){
+
+        /** Example 1:  new item 
+        Order order = new Order();
+        repository().save(order);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(deliveryFinished.get???()).ifPresent(order->{
+            
+            order // do something
+            repository().save(order);
+
+
+         });
+        */
+
+        
+    }
 
 
 }
