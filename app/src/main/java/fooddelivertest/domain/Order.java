@@ -85,27 +85,7 @@ public class Order  {
         return orderRepository;
     }
 
-
-
-
     public static void alertOrderStatus(Accepted accepted){
-
-        /** Example 1:  new item 
-        Order order = new Order();
-        repository().save(order);
-
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(accepted.get???()).ifPresent(order->{
-            
-            order // do something
-            repository().save(order);
-
-
-         });
-        */
 
         repository().findById(accepted.getOrderId()).ifPresent(order->{
             
@@ -116,23 +96,6 @@ public class Order  {
          });
     }
     public static void alertOrderStatus(Rejected rejected){
-
-        /** Example 1:  new item 
-        Order order = new Order();
-        repository().save(order);
-
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(rejected.get???()).ifPresent(order->{
-            
-            order // do something
-            repository().save(order);
-
-
-         });
-        */
 
         repository().findById(rejected.getOrderId()).ifPresent(order->{
             
@@ -145,23 +108,6 @@ public class Order  {
     }
     public static void alertOrderStatus(Cooked cooked){
 
-        /** Example 1:  new item 
-        Order order = new Order();
-        repository().save(order);
-
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(cooked.get???()).ifPresent(order->{
-            
-            order // do something
-            repository().save(order);
-
-
-         });
-        */
-
         repository().findById(cooked.getOrderId()).ifPresent(order->{
             
             order.setStatus("COOKED"); // do something
@@ -171,23 +117,6 @@ public class Order  {
          });
     }
     public static void alertOrderStatus(PickedUp pickedUp){
-
-        /** Example 1:  new item 
-        Order order = new Order();
-        repository().save(order);
-
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(pickedUp.get???()).ifPresent(order->{
-            
-            order // do something
-            repository().save(order);
-
-
-         });
-        */
 
         repository().findById(pickedUp.getOrderId()).ifPresent(order->{
             
@@ -199,23 +128,6 @@ public class Order  {
 
     }
     public static void alertOrderStatus(DeliveryFinished deliveryFinished){
-
-        /** Example 1:  new item 
-        Order order = new Order();
-        repository().save(order);
-
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(deliveryFinished.get???()).ifPresent(order->{
-            
-            order // do something
-            repository().save(order);
-
-
-         });
-        */
 
         repository().findById(deliveryFinished.getOrderId()).ifPresent(order->{
             
