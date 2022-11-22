@@ -21,7 +21,7 @@
                                 OrderId :  {{item.orderId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                StoreOrderId :  {{item.storeOrderId }}
+                                DeliveryStatus :  {{item.deliveryStatus }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 

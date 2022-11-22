@@ -38,9 +38,9 @@ public class Delivery  {
     
     
     
-    @Embedded
     
-    private StoreOrderId storeOrderId;
+    
+    private String deliveryStatus;
 
     @PostPersist
     public void onPostPersist(){

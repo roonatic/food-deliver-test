@@ -19,7 +19,7 @@
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Address :  {{data.address }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ OrderId :  {{data.orderId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ StoreOrderId :  {{data.storeOrderId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ DeliveryStatus :  {{data.deliveryStatus }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -103,7 +103,7 @@
             this.newValue = {
                 'address': '',
                 'orderId': 0,
-                'storeOrderId': {},
+                'deliveryStatus': '',
             }
         },
         methods: {

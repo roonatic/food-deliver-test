@@ -70,7 +70,7 @@
             me.newValue = {
                 'address': '',
                 'orderId': 0,
-                'storeOrderId': {},
+                'deliveryStatus': '',
             }
         },
         methods:{
