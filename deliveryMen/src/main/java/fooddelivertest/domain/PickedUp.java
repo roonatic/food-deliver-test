@@ -10,7 +10,7 @@ import lombok.*;
 public class PickedUp extends AbstractEvent {
 
     private Long id;
-    private String orderId;
+    private Long orderId;
 
     public PickedUp(Delivery aggregate){
         super(aggregate);

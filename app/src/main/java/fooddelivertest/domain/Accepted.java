@@ -9,8 +9,7 @@ import java.util.*;
 public class Accepted extends AbstractEvent {
 
     private Long id;
-    private String orderId;
-    private String options;
+    private Long orderId;
 }
 
 

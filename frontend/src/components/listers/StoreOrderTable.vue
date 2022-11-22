@@ -87,8 +87,8 @@
             this.values = temp.data._embedded.storeorders;
 
             this.newValue = {
-                'foodId': '',
-                'orderId': '',
+                'foodId': 0,
+                'orderId': 0,
                 'status': '',
             }
         },
