@@ -1,0 +1,82 @@
+server:
+  port: 8088
+
+---
+
+spring:
+  profiles: default
+  cloud:
+    gateway:
+      routes:
+        - id: app
+          uri: http://localhost:8081
+          predicates:
+            - Path=/orders/**, 
+        - id: 상점
+          uri: http://localhost:8082
+          predicates:
+            - Path=/storeOrders/**, 
+        - id: 결제
+          uri: http://localhost:8083
+          predicates:
+            - Path=/payHistories/**, 
+        - id: deliveryMen
+          uri: http://localhost:8084
+          predicates:
+            - Path=/deliveries/**, 
+        - id: frontend
+          uri: http://localhost:8080
+          predicates:
+            - Path=/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
+
+---
+
+spring:
+  profiles: docker
+  cloud:
+    gateway:
+      routes:
+        - id: app
+          uri: http://app:8080
+          predicates:
+            - Path=/orders/**, 
+        - id: 상점
+          uri: http://상점:8080
+          predicates:
+            - Path=/storeOrders/**, 
+        - id: 결제
+          uri: http://결제:8080
+          predicates:
+            - Path=/payHistories/**, 
+        - id: deliveryMen
+          uri: http://deliveryMen:8080
+          predicates:
+            - Path=/deliveries/**, 
+        - id: frontend
+          uri: http://frontend:8080
+          predicates:
+            - Path=/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
+server:
+  port: 8080
