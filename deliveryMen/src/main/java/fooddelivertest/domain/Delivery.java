@@ -35,6 +35,12 @@ public class Delivery  {
     
     
     private Long orderId;
+    
+    
+    
+    
+    
+    private String deliveryStatus;
 
     @PostPersist
     public void onPostPersist(){
@@ -47,6 +53,11 @@ public class Delivery  {
 
         DeliveryFinished deliveryFinished = new DeliveryFinished(this);
         deliveryFinished.publishAfterCommit();
+
+        // Get request from StoreOrder
+        //fooddelivertest.external.StoreOrder storeOrder =
+        //    Application.applicationContext.getBean(fooddelivertest.external.StoreOrderService.class)
+        //    .getStoreOrder(/** mapping value needed */);
 
     }
 
